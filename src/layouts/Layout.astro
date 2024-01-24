@@ -1,12 +1,14 @@
 ---
+import '@fontsource/poppins';
+import '@fontsource-variable/onest';
+import Header from '../components/Header.astro';
+
 interface Props {
 	title: string;
 	description: string;
 }
 
 const { title, description } = Astro.props;
-import '@fontsource/poppins';
-import '@fontsource-variable/onest';
 ---
 
 <!doctype html>
@@ -19,6 +21,7 @@ import '@fontsource-variable/onest';
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
@@ -47,6 +50,7 @@ body{
     font-size: 1.6rem;
     margin: 0;
     background-color: var(--white);
+	scroll-behavior: smooth;
 
 }
 
