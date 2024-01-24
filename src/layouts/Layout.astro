@@ -1,9 +1,10 @@
 ---
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 import '@fontsource/poppins';
 import '@fontsource-variable/onest';
 ---
@@ -12,7 +13,7 @@ import '@fontsource-variable/onest';
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
@@ -30,9 +31,6 @@ import '@fontsource-variable/onest';
     --white: #F6FAFF;
 	--blue: #76D8D9;
 	--blur: #80808080;
-
-    
-    
 }
 
 html {
