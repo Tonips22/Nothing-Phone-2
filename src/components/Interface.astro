@@ -1,0 +1,141 @@
+<section>
+    <img class="first-img" src="../../public/nothingPhone.png" alt="Nothing Phone">
+
+    <div class="info-interface">
+        <img src="../../public/nothingPhone.png" alt="Nothing Phone">
+
+        <div class="info">
+            <h1>New Glyph Interface</h1>
+
+            <h2>Love at First Light</h2>
+
+            <p>Una forma de estar pendiente del teléfono sin estar pendiente del teléfono.</p>
+
+            <p>Asigna secuencias de luz y sonido distintas a cada contacto y tipo de notificación</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 200vh;
+
+        position: relative;
+    }
+
+    .first-img{
+            position: relative;
+
+            animation: movePhone linear both;
+            animation-timeline: view();
+            animation-range: entry 65% cover 70%;
+
+
+        }
+
+    .info-interface{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        position: relative;
+
+        img{
+            position: relative;
+            z-index: 2;
+
+            view-timeline-name: --phone;
+            view-timeline-axis: block;
+            animation-timeline: --phone;
+            animation-name: info-phone;
+            animation-range: 20% 40%;
+            animation-fill-mode: both;
+
+
+        }
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        gap: 2rem;
+
+        color: var(--white);
+        font-family: var(--primaryFont);
+        z-index: 1;
+
+        h1{
+            font-size: 5rem;
+        }
+
+        h2{
+            font-size: 3rem;
+        }
+
+        p{
+            font-family: var(--secondaryFont);
+        }
+
+        view-timeline-name: --phone;
+            view-timeline-axis: block;
+            animation-timeline: --phone;
+            animation-name: info-text;
+            animation-range: 5% 30%;
+            animation-fill-mode: both;
+    }
+
+    @keyframes movePhone{
+        0%{
+            transform: translateY(200px);
+            opacity: 0;
+            scale: 1;
+        }
+
+        50%{
+            transform: translateY(0);
+            opacity: 1;
+            scale: 1;
+        }
+
+        100%{
+            scale: 2.5;
+            opacity: 0;
+        }
+    }
+
+    @keyframes info-phone{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);
+            scale: 0.9;
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+            scale: 1;
+        }
+    }
+
+    @keyframes info-text{
+        0%{
+            opacity: 0;
+            transform: translateX(-100px);
+            scale: 0.9;
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+            scale: 1;
+        }
+    }
+</style>
