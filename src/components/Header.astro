@@ -35,8 +35,8 @@
 
         animation: fadeIn .5s ease-in-out forwards;
         animation: header-scroll ease-in-out both;
-        animation-timeline: scroll();
-        animation-range: 5% 100%;
+        animation-timeline: scroll(root);
+        animation-range: 0 300px;
     }
 
     .nav-bar{
@@ -76,8 +76,8 @@
             background-color: transparent;
         }
         to{
-            background-color: var(--blur);
-            backdrop-filter: blur(10px);
+            background-color: rgba(65, 65, 65, 0.5);
+            backdrop-filter: blur(5px);
         }
     }
 </style>
