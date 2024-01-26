@@ -1,0 +1,175 @@
+<section class="OS-2" id="OS">
+    <h1>Nothing OS 2.0</h1>
+
+    <h2>Your stamp nothing</h2>
+
+    <p>We've given our software a new visual identity with an unmistakably Nothing touch.</p>
+    <p>Powerful and efficient. Simple and stimulating.</p>
+</section>
+
+<section class="specifications">
+    <article class="container-spe">
+        <video src="../../video4.mp4" autoplay loop muted></video>
+
+        <div class="info-spe">
+            <h1>Personalization</h1>
+
+            <h2>More fun. Less distractions</h2>
+
+            <p>We've reinvented the home and lock screen feature. Customize everything from app labels and modular layouts to widget sizes and color themes. Now, with new folder formats and illustrated covers.</p>
+
+            <p>Your phone your way. For a faster and more intuitive experience.</p>
+        </div>
+    </article>
+
+    <article class="container-spe">
+        <video src="../../video5.mp4" autoplay loop muted></video>
+
+        <div class="info-spe">
+            <h1>Widgets</h1>
+
+            <h2>Enjoy your life outside of Apps</h2>
+
+            <p>Create widgets for your Quick Settings functions for more practical use. Or avoid having to unlock your phone by adding key widgets to the lock screen as well.</p>
+
+            <p>Access information from apps like the media player and the Nothing X app right from the home screen.</p>
+        </div>
+    </article>
+</section>
+
+<style>
+    .specifications{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: var(--white);
+        
+    }
+
+    .container-spe{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 100vh;
+
+        video{
+            width: 50%;
+            height: 100%;
+            border-radius: 0 5rem 2rem 0;
+        }
+    }
+
+    .info-spe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        h1{
+            font-size: 5rem;
+            font-weight: 700;
+            color: #000;
+            font-family: var(--primaryFont);
+
+            animation: text-ani both;
+            animation-timeline: view();
+            animation-range: entry 90% cover 100%;
+        }
+
+        h2{
+            font-size: 3rem;
+            font-weight: 400;
+            color: #000;
+            font-family: var(--primaryFont);
+
+            animation: text-ani both;
+            animation-timeline: view();
+            animation-range: entry 80% cover 90%;
+        }
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #000;
+            font-family: var(--secondaryFont);
+            max-width: 80%;
+            text-wrap: pretty;
+
+            animation: text-ani both;
+            animation-timeline: view();
+            animation-range: entry 50% cover 60%;
+        }
+    }
+
+    @keyframes text-ani{
+        from{
+            opacity: 0;
+            transform: translateY(5rem);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .OS-2{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 2rem;
+
+        height: 100vh;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            background: url("../../public/imagen2.webp") no-repeat center;
+            background-size: cover;
+
+            filter: blur(5px);
+            animation: blur-ani 0.3s ease-in-out both;
+
+            z-index: -1;
+        }
+
+        h1{
+            font-size: 5rem;
+            font-weight: 700;
+            color: #000;
+            font-family: var(--primaryFont);
+            z-index: 1;
+        }
+
+        h2{
+            font-size: 3rem;
+            font-weight: 400;
+            color: #000;
+            font-family: var(--primaryFont);
+            z-index: 1;
+        }
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #000;
+            font-family: var(--secondaryFont);
+            z-index: 1;
+            max-width: 30%;
+        }
+    }
+</style>
