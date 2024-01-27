@@ -1,0 +1,80 @@
+<section class="our-camera">
+    <img src="../../public/imagen3.webp" alt="camera image">
+
+    <div class="presentation">
+        <h1 id="camera">Our Camera</h1>
+
+        <p>Photos and videos more precise and more dynamic than ever.</p>
+    </div>
+</section>
+
+<style>
+    .our-camera{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+
+            animation: img-fade both;
+            animation-timeline: view();
+            animation-range-start: entry 100%;
+            animation-range-end: entry 115%;
+        }
+    }
+
+    .presentation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vh;
+
+        animation: presentation-appear both;
+        animation-timeline: view();
+        animation-range-start: entry 65%;
+        animation-range-end: entry 95%;
+
+        h1{
+            font-size: 5rem;
+            color: var(--white);
+            font-family: var(--primaryFont);
+        }
+
+        p{
+            font-size: 2rem;
+            color: var(--white);
+            text-align: center;
+            /* max-width: 80%; */
+            font-family: var(--primaryFont);
+            font-weight: 100;
+
+        }
+    }
+
+    @keyframes img-fade{
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
+    }
+
+    @keyframes presentation-appear{
+        from{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+</style>
