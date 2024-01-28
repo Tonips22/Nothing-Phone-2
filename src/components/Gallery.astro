@@ -1,0 +1,93 @@
+---
+import 'photoswipe/style.css';
+---
+<section>
+    <h1>#withNothing</h1>
+
+    <div class="gallery" id="gallery">
+        <a href="../../public/imagen5.webp" target="_blank" data-pswp-width="2000" data-pswp-height="1500">
+            <img src="../../public/imagen5-thumb.webp" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen6.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="2667">
+            <img src="../../public/imagen6-thumb.webp" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen7.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="2667">
+            <img src="../../public/imagen7-thumb.webp" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen8.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="1617">
+            <img src="../../public/imagen8-thumb.webp" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen9.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="1617">
+            <img src="../../public/imagen9-thumb.webp" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen10.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="2667">
+            <img src="../../public/imagen10-thumb.jpg" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen11.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="2667">
+            <img src="../../public/imagen11-thumb.webp" alt="gallery image" loading="lazy">
+        </a>
+    
+        <a href="../../public/imagen12.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="1506">
+            <img src="../../public/imagen12-thumb.webp" alt="gallery image">
+        </a>
+    
+        <a href="../../public/imagen13.jpg" target="_blank" data-pswp-width="2000" data-pswp-height="2667">
+            <img src="../../public/imagen13-thumb.webp" alt="gallery image">
+        </a>
+      </div>
+</section>
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5rem;
+
+        h1{
+            font-size: 5rem;
+            margin: 1rem;
+            color: var(--white);
+            font-family: var(--primaryFont);
+        }
+    }
+
+    .gallery{
+        columns: 3;
+        column-gap: 1rem;
+        margin: 1rem;
+        
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            cursor: pointer;
+
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                transform: scale(1.01);
+                filter: brightness(1.2);
+            }
+        
+        }
+    }
+</style>
+
+<script>
+    import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        pswpModule: () => import('photoswipe')
+    });
+    lightbox.init();
+</script>
