@@ -1,14 +1,144 @@
-<section class="our-camera">
+<section class="our-camera" id="camera">
     <img src="../../public/imagen3.webp" alt="camera image">
 
     <div class="presentation">
-        <h1 id="camera">Our Camera</h1>
+        <h1>Our Camera</h1>
 
         <p>Photos and videos more precise and more dynamic than ever.</p>
     </div>
 </section>
 
+<section class="properties">
+    <article class="card">
+        <video src="../../public/video7.mp4" autoplay loop muted></video>
+
+        <div class="info-card">
+            <h2>HDR Avanzado</h2>
+
+            <p>Raw Format</p>
+            <p>Dark Mode</p>
+        </div>
+    </article>
+
+    <article class="card">
+        <video src="../../public/video10.mp4" autoplay loop muted></video>
+
+        <div class="info-card">
+            <h2>Selfie Camera</h2>
+
+            <p>32MP Front Camera</p>
+        </div>
+    </article>
+
+    <article class="card">
+        <video src="../../public/video6.mp4" autoplay loop muted></video>
+
+        <div class="info-card">
+            <h2>Dual Rear Camera</h2>
+
+            <p>50MP Main Camera</p>
+            <p>50MP Wide Angle Camera</p>
+            <p>Motion capture 2.0</p>
+            <p>Zoom Super-Res 2X</p>
+        </div>
+    </article>
+
+    <article class="card">
+        <video src="../../public/video11.mp4" autoplay loop muted></video>
+
+        <div class="info-card">
+            <h2>Action Mode</h2>
+
+            <p>4K video recording at 60 fps</p>
+
+        </div>
+    </article>
+</section>
+
 <style>
+    .properties{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+        
+        height: 100vh;
+    }
+
+    .card{
+        position: relative;
+        overflow: hidden;
+
+        cursor: pointer;
+
+        border-radius: 5rem;
+        /* border: 2px solid var(--white); */
+
+
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: all .3s ease-in-out; 
+
+            border-radius: 2rem;
+        }
+        
+
+        &:hover .info-card{
+            display: flex;
+        }
+
+        &:hover video{
+            transform: scale(1.1);
+            filter: grayscale(100%);
+        }
+
+        .info-card{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+
+            border-radius: 5rem;
+
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            animation: info-fade .5s ease-in-out both;
+
+            h2{
+                font-size: 3rem;
+                color: var(--white);
+                font-family: var(--primaryFont);
+            }
+
+            p{
+                font-size: 1.5rem;
+                color: var(--white);
+                text-align: center;
+                max-width: 80%;
+                font-family: var(--primaryFont);
+                font-weight: 100;
+            }
+        }
+    }
+
+    @keyframes info-fade{
+        from{
+            opacity: 0;
+            scale: 1.1;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
     .our-camera{
 
         display: flex;
@@ -78,3 +208,18 @@
         }
     }
 </style>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach((card) => {
+        const video = card.querySelector('video');
+        card.addEventListener('mouseenter', () => {
+            video.pause();
+        });
+
+        card.addEventListener('mouseleave', () => {
+            video.play();
+        });
+    });
+</script>
