@@ -10,7 +10,7 @@
 
 <section class="properties">
     <article class="card">
-        <video src="../../public/video7.mp4" autoplay loop muted></video>
+        <video src="../../public/video7.mp4" autoplay loop muted preload="none"></video>
 
         <div class="info-card">
             <h2>HDR Avanzado</h2>
@@ -21,7 +21,7 @@
     </article>
 
     <article class="card">
-        <video src="../../public/video10.mp4" autoplay loop muted></video>
+        <video src="../../public/video10.mp4" autoplay loop muted preload="none"></video>
 
         <div class="info-card">
             <h2>Selfie Camera</h2>
@@ -31,7 +31,7 @@
     </article>
 
     <article class="card">
-        <video src="../../public/video6.mp4" autoplay loop muted></video>
+        <video src="../../public/video6.mp4" autoplay loop muted preload="none"></video>
 
         <div class="info-card">
             <h2>Dual Rear Camera</h2>
@@ -44,7 +44,7 @@
     </article>
 
     <article class="card">
-        <video src="../../public/video11.mp4" autoplay loop muted></video>
+        <video src="../../public/video11.mp4" autoplay loop muted preload="none"></video>
 
         <div class="info-card">
             <h2>Action Mode</h2>
@@ -63,6 +63,8 @@
         row-gap: 2rem;
         
         height: 100vh;
+
+        padding: 0 2rem;
     }
 
     .card{
@@ -71,7 +73,7 @@
 
         cursor: pointer;
 
-        border-radius: 5rem;
+        border-radius: 2rem;
         /* border: 2px solid var(--white); */
 
 
@@ -102,7 +104,7 @@
             height: 100%;
             background-color: rgba(0,0,0,.5);
 
-            border-radius: 5rem;
+            border-radius: 2rem;
 
             display: none;
             flex-direction: column;
