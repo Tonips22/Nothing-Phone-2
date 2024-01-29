@@ -19,12 +19,9 @@
         </div>
     </div>
 </section>
-
-<section class="slider" id="interface">
-    <img src="../../left.svg" class="left" alt="left arrow">
-
-    <div class="slider-container">
-        <video src="../../Video1.mp4" autoplay loop muted></video>
+<swiper-container style="--swiper-navigation-color: var(--white); --swiper-pagination-color: var(--white)" class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" centered-slides="true" autoplay-delay="4000" autoplay-disable-on-interaction="true" rewind="true" id="interface">
+    <swiper-slide>
+        <video src="../../video1.mp4" autoplay loop muted preload="none"></video>
 
         <div class="info-slider">
             <h1>Everyday Functions</h1>
@@ -32,91 +29,35 @@
             <h2>Without needing to look at the screen</h2>
 
             <p>See key information and track its evolution through individual Glyph segments. Use the lights as a timer, battery indicator, volume level check, and your own portable ring light. A genius.</p>
-    </div>
+        </div>
+    </swiper-slide>
 
-    <img src="../../right.svg" class="right" alt="right arrow">
-</section>
+    <swiper-slide>
+        <video src="../../video2.mp4" autoplay loop muted preload="none"></video>
+
+        <div class="info-slider">
+            <h1>Glyph Notifications</h1>
+
+            <h2>Put the phone aside</h2>
+
+            <p>The new Essential Notifications allow you to focus and continue to be available for important people. When selected contacts or applications send you a notification, a Glyph light flashes insistently until you open it. Everything else can wait.</p>
+        </div>
+    </swiper-slide>
+
+    <swiper-slide>
+        <video src="../../video3.mp4" autoplay loop muted preload="none"></video>
+
+        <div class="info-slider">
+            <h1>Glyph Composer</h1>
+
+            <h2>"Put a ring on it"</h2>
+
+            <p>The stage is yours. Touch the different keys to activate a different combination of lights and sounds. When you find your rhythm, press to record and create your own Glyph ringtones.</p>
+        </div>
+    </swiper-slide>
+  </swiper-container>
 
 <style>
-    .slider{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-        height: 100vh;
-        width: 100%;
-
-        margin-top: 2rem;
-
-        img{
-            position: absolute;
-            z-index: 2;
-            width: 3rem;
-            color: var(--white);
-            transition: all 0.3s ease-in-out;
-
-            &:hover{
-                cursor: pointer;
-                scale: 1.1;
-            }
-
-            &:first-child{
-                left: 10px;
-            }
-
-            &:last-child{
-                right: 10px;
-            }
-        }
-    }
-
-    .slider-container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-
-        video{
-            width: 50%;
-        }
-    }
-
-    .info-slider{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-
-        color: var(--white);
-        font-family: var(--primaryFont);
-        z-index: 1;
-
-        animation: intro-slider ease-in-out 1s;
-
-        h1{
-            font-size: 5rem;
-            animation: intro-info both;
-            animation-timeline: view();
-            animation-range: entry 65% cover 70%;
-
-            text-wrap: balance;
-        }
-
-        h2{
-            font-size: 3rem;
-            text-wrap: balance;
-        }
-
-        p{
-            font-family: var(--secondaryFont);
-            width: 60%;
-            text-wrap: pretty;
-        }
-    }
-
-
     .show{
         display: flex;
         flex-direction: column;
@@ -239,75 +180,61 @@
         }
     }
 
-    
+    swiper-container {
+      width: 100%;
+      height: 100vh;
+    }
+
+    swiper-slide {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        color: var(--white);
+
+        video{
+            width: 50%;
+            height: 100%;
+            border-radius: 0 5rem 5rem 0;
+        }
+    }
+
+    .info-slider{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        color: var(--white);
+        font-family: var(--primaryFont);
+        z-index: 1;
+
+        animation: intro-slider ease-in-out 1s;
+
+        h1{
+            font-size: 5rem;
+            animation: intro-info both;
+            animation-timeline: view();
+            animation-range: entry 65% cover 70%;
+
+            text-wrap: balance;
+        }
+
+        h2{
+            font-size: 3rem;
+            text-wrap: balance;
+        }
+
+        p{
+            font-family: var(--secondaryFont);
+            width: 60%;
+            text-wrap: pretty;
+        }
+    }
     
 </style>
 
-<script>
-    const array = [
-    {
-        id: 1,
-        title: `Everyday Functions`,
-        subtitle: "Without needing to look at the screen",
-        text: "See key information and track its evolution through individual Glyph segments. Use the lights as a timer, battery indicator, volume level check, and your own portable ring light. A genius.",
-        video: "../../Video1.mp4"
-    }, 
-
-    {
-        id: 2,
-        title: "Glyph Notifications",
-        subtitle: "Put the phone aside",
-        text: "The new Essential Notifications allow you to focus and continue to be available for important people. When selected contacts or applications send you a notification, a Glyph light flashes insistently until you open it. Everything else can wait.",
-        video: "../../Video2.mp4"
-    }, 
-
-    {
-        id: 3,
-        title: "Glyph Composer",
-        subtitle: " \"Put a ring on it\"",
-        text: "The stage is yours. Touch the different keys to activate a different combination of lights and sounds. When you find your rhythm, press to record and create your own Glyph ringtones.",
-        video: "../../Video3.mp4"
-    }
-];
-
-
-const slider = document.querySelector(".slider-container");
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-
-let counter = 0;
-
-left.addEventListener("click", () => {
-    counter--;
-
-    if(counter < 0){
-        counter = array.length - 1;
-    }
-
-    updateSlide();
-});
-
-right.addEventListener("click", () => {
-    counter++;
-
-    if(counter > array.length - 1){
-        counter = 0;
-    }
-
-    updateSlide();
-});
-
-function updateSlide() {
-    const videoElement = slider.querySelector("video");
-    const infoElement = slider.querySelector(".info-slider");
-
-    videoElement.src = array[counter].video;
-    infoElement.innerHTML = `
-        <h1>${array[counter].title}</h1>
-        <h2>${array[counter].subtitle}</h2>
-        <p>${array[counter].text}</p>
-    `;
-}
-
-
-</script>
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
