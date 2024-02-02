@@ -11,6 +11,11 @@
     </nav>
 </header>
 
+
+<a href="#video" class="arrow">
+    <img src="../../arrow-up.svg" alt="arrow-up">
+</a>
+
 <style>
     header{
         position: fixed;
@@ -79,6 +84,48 @@
         to{
             background-color: rgba(65, 65, 65, 0.5);
             backdrop-filter: blur(5px);
+        }
+    }
+
+    .arrow{
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 900;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        padding: .5rem;
+        background-color: var(--white);
+        border-radius: 50%;
+
+        img{
+            width: 3rem;
+            height: 3rem;
+        }
+
+        animation: arrow-fade ease-in-out both;
+        animation-timeline: scroll(root);
+        animation-range: 0 300px;
+    }
+
+    @keyframes arrow-fade{
+        0%{
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        75%{
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>
