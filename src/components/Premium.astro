@@ -1,0 +1,129 @@
+<section class="specifications">
+    <article class="container-spe" id="premium">
+        <video src="../../video12.mp4" autoplay loop muted></video>
+
+        <div class="info-spe">
+            <h1>Premium</h1>
+
+            <h2>Recycled Materials</h2>
+            
+            <p>Nothing looks for the sustainability of creation and the planet.</p>
+
+            <p>100% recycled aluminum frame, 100% recycled tin on 9 circuit boards, 100% recycled copper film on base plate, Over 90% recycled steel on all 28 die-cut steel parts, 80% plastic parts from sustainable sources.</p>
+        </div>
+    </article>
+
+    <article class="container-spe"  id="battery">
+        <video src="../../video8.mp4" autoplay loop muted></video>
+
+        <div class="info-spe">
+            <h1>Battery</h1>
+
+            <h2>A battery that goes on and on</h2>
+
+            <p>At 4700 mAh, Phone (2) has our longest-lasting battery to date.</p>
+
+            <p>Fully charges in just 55 minutes. Lasts up to 22.5 hours. Support 15W Qi wireless charging.</p>
+        </div>
+    </article>
+</section>
+
+<style>
+    .specifications{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+        margin-top: 70vh;
+        gap: 50vh;
+    }
+
+    .container-spe{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 100vh;
+
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 40% cover 50%;
+
+        video{
+            width: 50%;
+            height: 100%;
+            border-radius: 0 5rem 5rem 0;
+        }
+    }
+
+    .info-spe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        h1{
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--white);
+            font-family: var(--primaryFont);
+
+            animation: text-ani both;
+            animation-timeline: view();
+            animation-range: entry 90% cover 100%;
+        }
+
+        h2{
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--white);
+            font-family: var(--primaryFont);
+
+            animation: text-ani both;
+            animation-timeline: view();
+            animation-range: entry 80% cover 90%;
+        }
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--white);
+            font-family: var(--secondaryFont);
+            max-width: 80%;
+            text-align: center;
+            text-wrap: pretty;
+
+            animation: text-ani both;
+            animation-timeline: view();
+            animation-range: entry 50% cover 60%;
+        }
+    }
+
+    @keyframes text-ani{
+        from{
+            opacity: 0;
+            transform: translateY(5rem);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes container-ani{
+        from{
+            opacity: 0;
+            transform: translateY(10rem);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
