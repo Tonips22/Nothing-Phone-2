@@ -1,0 +1,263 @@
+<footer class="footer">
+    <video src="../../videoPrincipal2.mp4" autoplay loop muted preload="none"></video>
+    <section class="main">
+        <div class="links">
+            <div class="container-link">
+                <h3>Products</h3>
+
+                <a target="blank" href="https://es.nothing.tech/pages/phone-2">Phone(2)</a>
+                <a target="blank" href="https://es.nothing.tech/pages/phone-1">Phone(1)</a>
+                <a target="blank" href="https://es.nothing.tech/pages/phone-1">Ear(2)</a>
+                <a target="blank" href="https://es.nothing.tech/products/ear-stick">Ear(Stick)</a>
+                <a target="blank" href="https://es.nothing.tech/pages/store">Accessories</a>
+            </div>
+
+            <div class="container-link">
+                <h3>About Us</h3>
+
+                <a target="blank" href="https://es.nothing.tech/pages/about">About Nothing</a>
+                <a target="blank" href="https://es.nothing.tech/pages/careers">Careers</a>
+                <a target="blank" href="https://es.nothing.tech/pages/nothing-community">Community</a>
+                <a target="blank" href="https://es.nothing.tech/pages/nothing-community">News</a>
+                <a target="blank" href="https://es.nothing.tech/pages/nothing-community">Student programmes</a>
+                <a target="blank" href="https://es.nothing.tech/pages/sustainability">Sustainability</a>
+                <a target="blank" href="https://es.nothing.tech/pages/business-enquiry">Business Enquiry</a>
+                <a target="blank" href="https://es.nothing.tech/pages/press-contact">Press Contact</a>
+            </div>
+
+            <div class="container-link">
+                <h3>Support</h3>
+
+                <a target="blank" href="https://es.nothing.tech/pages/support-centre">Support Centre</a>
+                <a target="blank" href="https://es.nothing.tech/pages/support-centre">Contact Support</a>
+                <a target="blank" href="https://es.nothing.tech/pages/support-centre">Store Locator</a>
+            </div>
+        </div>
+
+        <div class="info">
+            <label for="">Join to our Newsletter<input type="email" placeholder="E-mail"></label>
+
+            <div class="payment">
+                <h3>Pay methods:</h3>
+
+                <div class="pay-imgs">
+                    <img src="../../payment1.webp" alt="Shop pay">
+                    <img src="../../payment2.webp" alt="Apple pay">
+                    <img src="../../payment3.webp" alt="pay">
+                    <img src="../../payment4.webp" alt="Paypal">
+                    <img src="../../payment5.webp" alt="Visa">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <hr> -->
+    <footer class="intra-footer">
+        <a target="blank" href="https://es.nothing.tech/pages/privacy-policy">Privacy Policy</a>
+        <a target="blank" href="https://es.nothing.tech/pages/terms-of-sales">Terms of Sales</a>
+        <a target="blank" href="https://es.nothing.tech/pages/user-agreement">User Agreetment</a>
+        <a target="blank" href="https://es.nothing.tech/pages/nothing-website-acceptable-use-policy">Acceptable Use Policy</a>
+
+        <div class="social-media">
+            <a target="blank" href="https://www.instagram.com/tonniggrcia_/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="blank" href="https://www.youtube.com/c/NothingTechnology"><i class="fa-brands fa-youtube"></i></a>
+            <a target="blank" href="https://twitter.com/nothing"><i class="fa-brands fa-x"></i></a>
+            <a target="blank" href="https://www.tiktok.com/@nothing"><i class="fa-brands fa-tiktok"></i></a>
+            <a target="blank" href="https://discord.com/invite/nothingtech"><i class="fa-brands fa-discord"></i></a>
+            <a target="blank" href="https://github.com/Tonips22"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</footer>
+
+<style>
+    .footer{
+        /* min-height: calc(100vh - 45.6px); */
+
+        display: flex;
+        flex-direction: column;
+        
+        position: relative;
+
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        hr{
+            width: 100%;
+            border: 1px solid var(--white);
+
+            background-color: var(--blur);
+            backdrop-filter: blur(5px);
+        }
+    }
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        background-color: var(--blur);
+        backdrop-filter: blur(5px);
+        color: var(--white);
+    }
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .container-link{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        a{
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: .5rem 0;
+
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                scale: 1.1;
+            }
+        }
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 2rem;
+
+        width: 100%;
+
+        label{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            width: 80%;
+
+            font-size: 2rem;
+            font-weight: bold;
+
+
+
+        input{
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid var(--white);
+
+            background-color: transparent;
+            color: var(--white)
+
+            font-size: 1.6rem;
+            font-family: var(--primaryFont);
+
+            transition: all .3s ease-in-out;
+
+            &::placeholder{
+                color: var(--white);
+            }
+
+            &:focus{
+                background-color: var(--white);
+                color: var(--black);
+
+                &::placeholder{
+                color: var(--black);
+            }
+            }
+
+            
+        }
+    }
+}
+
+.payment{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+
+    h3{
+        font-size: 2rem;
+    }
+
+    
+}
+
+.pay-imgs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    img{
+        width: 5rem;
+        height: 3rem;
+    }
+}
+
+.intra-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+
+    background-color: var(--blur);
+    backdrop-filter: blur(5px);
+    color: var(--white);
+
+    a{
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+    a{
+        color: var(--white);
+        text-decoration: none;
+        font-size: 2rem;
+
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}
+</style>
+
+<script src="https://kit.fontawesome.com/ebd46689b1.js" crossorigin="anonymous"></script>
