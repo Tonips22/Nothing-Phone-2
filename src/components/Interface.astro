@@ -69,26 +69,32 @@
     }
 
     .first-img{
-            position: relative;
+        position: relative;
 
-            animation: movePhone linear both;
-            animation-timeline: view();
-            animation-range: entry 65% cover 70%;
+        animation: movePhone linear both;
+        animation-timeline: view();
+        animation-range: entry 65% cover 70%;
 
 
-        }
+    }
 
     .info-interface{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+
+        margin-bottom: 2rem;
+
+        gap: 5rem;
 
         position: relative;
 
         img{
             position: relative;
             z-index: 2;
+
+            max-height: 80vh;
 
             view-timeline-name: --phone;
             view-timeline-axis: block;
@@ -106,7 +112,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 55%;
+        max-width: 60%;
         gap: 2rem;
 
         color: var(--white);
@@ -115,14 +121,17 @@
 
         h1{
             font-size: 5rem;
+            text-align: center;
         }
 
         h2{
             font-size: 3rem;
+            text-align: center;
         }
 
         p{
-            font-family: var(--secondaryFont);
+            text-align: center;
+            text-wrap: pretty;
         }
 
         view-timeline-name: --phone;
