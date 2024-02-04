@@ -2,6 +2,7 @@
     <a href="\"><h1>Nothing (R)</h1></a>
 
     <nav class="nav-bar">
+        <i class="menu fa-solid fa-bars"></i>
         <a href="#interface">Glyph Interface</a>
         <a href="#OS">NothingOS 2.0</a>
         <a href="#camera">Camera</a>
@@ -9,6 +10,18 @@
         <a href="#battery">Battery</a>
         <a href="#spects">Spects</a>
     </nav>
+
+    <div class="media-menu">
+        <i  class="cross fa-solid fa-xmark"></i>
+        <nav class="nav-media">
+            <a href="#interface">Glyph Interface</a>
+            <a href="#OS">NothingOS 2.0</a>
+            <a href="#camera">Camera</a>
+            <a href="#premium">Premium</a>
+            <a href="#battery">Battery</a>
+            <a href="#spects">Spects</a>
+        </nav>
+    </div>
 </header>
 
 
@@ -51,7 +64,83 @@
         align-items: center;
         justify-content: space-between;
         width: 50%;
+
+        i{
+            display: none;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 2rem;
+        }
     }
+
+    .media-menu{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+
+        .nav-media{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            width: 100%;
+            height: 100%;
+
+            font-family: var(--primaryFont);
+
+            a{
+                font-size: 2rem;
+                font-weight: 400;
+                color: var(--white);
+
+                transition: all .3s ease-in-out;
+            }
+
+            a:hover{
+                color: scale(1.1);
+            }
+        }
+
+        i{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        animation: media-fade .3s ease-in-out both;
+    }
+
+    @media (max-width: 768px){
+
+        header{
+            justify-content: space-between;
+        }
+        .nav-bar{
+            flex-direction: column;
+            width: auto;
+
+            a{
+                display: none;
+            }
+
+            i{
+                display: block;
+            }
+        }
+    }
+
+    
 
     a{
         text-decoration: none;
@@ -63,27 +152,6 @@
 
         &:hover{
             scale: 1.1;
-        }
-    }
-
-    @keyframes fadeIn{
-        from{
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        to{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes header-scroll{
-        from{
-            background-color: transparent;
-        }
-        to{
-            background-color: rgba(65, 65, 65, 0.5);
-            backdrop-filter: blur(5px);
         }
     }
 
@@ -112,6 +180,27 @@
         animation-range: 0 300px;
     }
 
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes header-scroll{
+        from{
+            background-color: transparent;
+        }
+        to{
+            background-color: rgba(65, 65, 65, 0.5);
+            backdrop-filter: blur(5px);
+        }
+    }
+
     @keyframes arrow-fade{
         0%{
             opacity: 0;
@@ -128,4 +217,42 @@
             transform: translateY(0);
         }
     }
+
+    @keyframes media-fade{
+        from{
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
+
+<style is:global>
+    .no-scroll{
+            overflow: hidden;
+        }
+</style>
+
+<script src="https://kit.fontawesome.com/ebd46689b1.js" crossorigin="anonymous"></script>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const cross = document.querySelector(".cross");
+    const body = document.querySelector("body");
+    const media_menu = document.querySelector(".media-menu");
+
+    menu.addEventListener("click", ()=>{
+        media_menu.style.display = "flex";
+        menu.style.display = "none";
+        body.classList.add("no-scroll");
+    })
+
+    cross.addEventListener("click", ()=>{
+        media_menu.style.display = "none";
+        menu.style.display = "block";
+        body.classList.remove("no-scroll");
+    })
+</script>
