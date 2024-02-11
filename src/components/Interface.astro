@@ -55,7 +55,7 @@
             <p>The stage is yours. Touch the different keys to activate a different combination of lights and sounds. When you find your rhythm, press to record and create your own Glyph ringtones.</p>
         </div>
     </swiper-slide>
-  </swiper-container>
+</swiper-container>
 
 <style>
     .show{
@@ -65,11 +65,22 @@
         align-items: center;
         height: 200vh;
 
+        @media(width <= 768px){
+            justify-content: space-around;
+            height: 150vh;
+        }
+
         position: relative;
     }
 
     .first-img{
         position: relative;
+        
+        @media (width <= 768px) {
+            animation: movePhone-mq linear both;
+            animation-timeline: view();
+            animation-range: entry 65% cover 70%;
+        }
 
         animation: movePhone linear both;
         animation-timeline: view();
@@ -103,6 +114,10 @@
             animation-range: 20% 40%;
             animation-fill-mode: both;
 
+            @media(width <= 768px){
+                display: none;
+            }
+
 
         }
     }
@@ -118,6 +133,17 @@
         color: var(--white);
         font-family: var(--primaryFont);
         z-index: 1;
+
+        @media (width <= 768px) {
+            max-width: 100%;
+
+            view-timeline-name: --phone;
+            view-timeline-axis: block;
+            animation-timeline: --phone;
+            animation-name: info-text-media;
+            animation-range: 30% 50%;
+            animation-fill-mode: both;
+        }
 
         h1{
             font-size: 5rem;
@@ -161,17 +187,33 @@
         }
     }
 
+    @keyframes movePhone-mq{
+        0%{
+            transform: translateY(200px);
+            opacity: 0;
+        }
+
+        50%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        100%{
+            opacity: 0;
+        }
+    }
+
     @keyframes info-phone{
         0%{
             opacity: 0;
             transform: translateX(100px);
-            scale: 0.9;
+            /* scale: 0.9; */
         }
 
         100%{
             opacity: 1;
             transform: translateX(0);
-            scale: 1;
+            /* scale: 1; */
         }
     }
 
@@ -185,6 +227,20 @@
         100%{
             opacity: 1;
             transform: translateX(0);
+            scale: 1;
+        }
+    }
+
+    @keyframes info-text-media{
+        0%{
+            opacity: 0;
+            transform: translateY(-100px);
+            scale: 0.9;
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0);
             scale: 1;
         }
     }
@@ -206,6 +262,24 @@
             width: 50%;
             height: 100%;
             border-radius: 0 5rem 5rem 0;
+
+            @media (width <= 768px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+                border-radius: 0rem;
+
+            }
+        }
+
+
+        @media (width <= 768px) {
+            position: relative;
+
         }
     }
 
@@ -229,17 +303,21 @@
             animation-range: entry 65% cover 70%;
 
             text-wrap: balance;
+            text-align: center;
         }
 
         h2{
             font-size: 3rem;
             text-wrap: balance;
+
+            text-align: center;
         }
 
         p{
             font-family: var(--secondaryFont);
             width: 60%;
             text-wrap: pretty;
+            text-align: center;
         }
     }
     
