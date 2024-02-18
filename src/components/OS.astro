@@ -49,6 +49,10 @@
         justify-content: center;
         position: relative;
         background-color: var(--white);
+
+        @media (width <= 768px) {
+            gap: 2rem;
+        }
         
     }
 
@@ -64,6 +68,19 @@
             width: 50%;
             height: 100%;
             border-radius: 0 5rem 5rem 0;
+
+            @media (width <= 768px) {
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+
+            }
+        }
+
+        @media (width <= 768px) {
+            flex-direction: column;
+            margin: 2rem 0;
+            height: auto;
         }
     }
 
@@ -83,6 +100,7 @@
             animation: text-ani both;
             animation-timeline: view();
             animation-range: entry 90% cover 100%;
+            text-align: center;
         }
 
         h2{
@@ -90,6 +108,7 @@
             font-weight: 400;
             color: #000;
             font-family: var(--primaryFont);
+            text-align: center;
 
             animation: text-ani both;
             animation-timeline: view();
@@ -102,6 +121,7 @@
             color: #000;
             font-family: var(--secondaryFont);
             max-width: 80%;
+            text-align: center;
             text-wrap: pretty;
 
             animation: text-ani both;
@@ -143,6 +163,15 @@
             animation-range: entry 60% cover 70%;
 
             border-radius: 0 0 5rem 5rem;
+
+            @media (width <= 768px) {
+                object-fit: cover;
+                height: 100vh;
+            }
+        }
+
+        @media (width <= 768px) {
+            padding-bottom: 15rem;
         }
     }
 
@@ -163,21 +192,32 @@
             font-family: var(--primaryFont);
             z-index: 1;
 
+            text-align: center;
+
             animation: text-ani both;
             animation-timeline: view();
             animation-range: entry 90% cover 100%;
+
+            @media (width <= 768px) {
+                font-size: 5rem;
+            }
         }
 
         h2{
             font-size: 3rem;
             font-weight: 400;
             color: #000;
+            text-align: center;
             font-family: var(--primaryFont);
             z-index: 1;
 
             animation: text-ani both;
             animation-timeline: view();
             animation-range: entry 90% cover 100%;
+
+            @media (width <= 768px) {
+                font-size: 4rem;
+            }
         }
 
         p{
@@ -192,6 +232,16 @@
             animation: text-ani both;
             animation-timeline: view();
             animation-range: entry 50% cover 60%;
+
+            @media (width <= 768px) {
+                max-width: 95%;
+                font-size: 2rem;
+            }
+        }
+
+        @media (width <= 768px) {
+            justify-content: end;
+            
         }
     }
 
