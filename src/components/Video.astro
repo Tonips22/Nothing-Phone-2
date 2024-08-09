@@ -18,13 +18,14 @@
         position: relative;
         width: 100%;
         height: 100vh;
-        video{
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            
-        }
+    }
+
+    .container-video video{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        
     }
 
     .info-video{
@@ -44,23 +45,24 @@
 
         color: white;
         text-align: center;
-        h1{
-            font-size: 8rem;
-            font-family: --principal-font;
-            animation: video-appear 0.5s ease-in-out forwards;
-
-            cursor: default;
-        }
-
-        h2{
-            font-size: 2rem;
-            font-family: --principal-font;
-            animation: video-appear 0.5s 0.1s ease-in-out forwards;
-
-            cursor: default;
-        }
 
         animation: video-appear 0.5s ease-in-out forwards;
+    }
+
+    .info-video h1{
+        font-size: 8rem;
+        font-family: --principal-font;
+        animation: video-appear 0.5s ease-in-out forwards;
+
+        cursor: default;
+    }
+
+    .info-video h2{
+        font-size: 2rem;
+        font-family: --principal-font;
+        animation: video-appear 0.5s 0.1s ease-in-out forwards;
+
+        cursor: default;
     }
 
     .botons-video{
@@ -82,9 +84,10 @@
         text-transform: uppercase;
 
         transition: .3s ease-in-out;
-        &:hover{
-            transform: scale(1.1);
-        }
+    }
+
+    .btn:hover{
+        transform: scale(1.1);
     }
 
     .btn-blur{

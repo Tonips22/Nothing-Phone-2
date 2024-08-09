@@ -38,8 +38,10 @@
         
         margin-top: 70vh;
         gap: 50vh;
+    }
 
-        @media (width <= 768px) {
+    @media (width <= 768px) {
+        .specifications{
             margin-bottom: 50vh;
         }
     }
@@ -55,20 +57,22 @@
         animation: text-ani both;
         animation-timeline: view();
         animation-range: entry 40% cover 50%;
+    }
 
-        video{
-            width: 50%;
-            height: 100%;
-            border-radius: 0 5rem 5rem 0;
+    .container-spe video{
+        width: 50%;
+        height: 100%;
+        border-radius: 0 5rem 5rem 0;
+    }
 
-            @media (width <= 768px) {
-                width: 100%;
-                border-radius: 2rem 2rem 0 0;
-            }
+    @media (width <= 768px) {
+        .container-spe{
+            flex-direction: column;
         }
 
-        @media (width <= 768px) {
-            flex-direction: column;
+        .container-spe video{
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
         }
     }
 
@@ -78,43 +82,43 @@
         align-items: center;
         justify-content: center;
         gap: 2rem;
+    }
 
-        h1{
-            font-size: 5rem;
-            font-weight: 700;
-            color: var(--white);
-            font-family: var(--primaryFont);
+    .info-spe h1{
+        font-size: 5rem;
+        font-weight: 700;
+        color: var(--white);
+        font-family: var(--primaryFont);
 
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 90% cover 100%;
-        }
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 90% cover 100%;
+    }
 
-        h2{
-            font-size: 3rem;
-            font-weight: 400;
-            color: var(--white);
-            font-family: var(--primaryFont);
-            text-align: center;
+    .info-spe h2{
+        font-size: 3rem;
+        font-weight: 400;
+        color: var(--white);
+        font-family: var(--primaryFont);
+        text-align: center;
 
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 80% cover 90%;
-        }
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 80% cover 90%;
+    }
 
-        p{
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--white);
-            font-family: var(--secondaryFont);
-            max-width: 80%;
-            text-align: center;
-            text-wrap: pretty;
+    .info-spe p{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--white);
+        font-family: var(--secondaryFont);
+        max-width: 80%;
+        text-align: center;
+        text-wrap: pretty;
 
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 50% cover 60%;
-        }
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 60%;
     }
 
     @keyframes text-ani{

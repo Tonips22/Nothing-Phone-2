@@ -390,16 +390,13 @@
         gap: 2rem;
         min-height: 100vh;
         margin-bottom: 2rem;
+    }
 
-
-        h1 {
-            font-size: 5rem;
-            color: var(--white);
-            font-family: var(--primaryFont);
-            margin-bottom: 5rem;
-        }
-
-        
+    .spects h1 {
+        font-size: 5rem;
+        color: var(--white);
+        font-family: var(--primaryFont);
+        margin-bottom: 5rem;
     }
 
     details{
@@ -416,43 +413,43 @@
 
         cursor: pointer;
 
-        &:hover{
-            background-color: var(--white);
-            color: var(--black);
-        }
-
-        h2{
-            font-size: 3rem;
-            color: #000;
-            margin-bottom: 1rem;
-            text-align: center;
-            
-        }
-
-        sumary{
-            font-size: 2rem;
-            color: var(--white);
-        }
-
-        table{
-            width: 100%;
-            margin-bottom: 2rem;
-
-            &:last-child{
-                margin-bottom: 0;
-            }
-
-            th, td{
-                padding: 1rem;
-                text-align: center;
-                max-width: 10rem;
-            }
-        }
-
         @media (width <= 768px) {
             width: 95%;
             padding: 1rem;
         }
+    }
+
+    details:hover{
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    details h2{
+        font-size: 3rem;
+        color: #000;
+        margin-bottom: 1rem;
+        text-align: center;
+        
+    }
+
+    details sumary{
+        font-size: 2rem;
+        color: var(--white);
+    }
+
+    details table{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    details table:last-child{
+        margin-bottom: 0;
+    }
+
+    details table th, details table td{
+        padding: 1rem;
+        text-align: center;
+        max-width: 10rem;
     }
 
     details[open]{

@@ -49,11 +49,12 @@
         justify-content: center;
         position: relative;
         background-color: var(--white);
+    }
 
-        @media (width <= 768px) {
+    @media (width <= 768px) {
+        .specifications{
             gap: 2rem;
         }
-        
     }
 
     .container-spe{
@@ -63,24 +64,25 @@
         justify-content: space-between;
 
         height: 100vh;
+    }
 
-        video{
-            width: 50%;
-            height: 100%;
-            border-radius: 0 5rem 5rem 0;
+    .container-spe video{
+        width: 50%;
+        height: 100%;
+        border-radius: 0 5rem 5rem 0;
+    }
 
-            @media (width <= 768px) {
-                width: 100%;
-                height: auto;
-                border-radius: 0;
-
-            }
-        }
-
-        @media (width <= 768px) {
+    @media (width <= 768px) {
+        .container-spe{
             flex-direction: column;
             margin: 2rem 0;
             height: auto;
+        }
+
+        .container-spe video{
+            width: 100%;
+            height: auto;
+            border-radius: 0;
         }
     }
 
@@ -90,43 +92,57 @@
         align-items: center;
         justify-content: center;
         gap: 2rem;
+    }
 
-        h1{
-            font-size: 5rem;
-            font-weight: 700;
-            color: #000;
-            font-family: var(--primaryFont);
+    .info-spe h1{
+        font-size: 5rem;
+        font-weight: 700;
+        color: #000;
+        font-family: var(--primaryFont);
 
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 90% cover 100%;
-            text-align: center;
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 90% cover 100%;
+        text-align: center;
+    }
+
+    .info-spe h2{
+        font-size: 3rem;
+        font-weight: 400;
+        color: #000;
+        font-family: var(--primaryFont);
+        text-align: center;
+
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 80% cover 90%;
+    }
+
+    .info-spe p{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #000;
+        font-family: var(--secondaryFont);
+        max-width: 80%;
+        text-align: center;
+        text-wrap: pretty;
+
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 60%;
+    }
+
+    @media (width <= 768px) {
+        .info-spe h1{
+            font-size: 4rem;
         }
 
-        h2{
+        .info-spe h2{
             font-size: 3rem;
-            font-weight: 400;
-            color: #000;
-            font-family: var(--primaryFont);
-            text-align: center;
-
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 80% cover 90%;
         }
 
-        p{
+        .info-spe p{
             font-size: 1.5rem;
-            font-weight: 400;
-            color: #000;
-            font-family: var(--secondaryFont);
-            max-width: 80%;
-            text-align: center;
-            text-wrap: pretty;
-
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 50% cover 60%;
         }
     }
 
@@ -148,30 +164,32 @@
         height: 100vh;
         background-color: var(--white);
 
-        img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-
-            z-index: 500;
-
-            animation: img-dissapear both;
-            animation-timeline: view();
-            animation-range: entry 60% cover 70%;
-
-            border-radius: 0 0 5rem 5rem;
-
-            @media (width <= 768px) {
-                object-fit: cover;
-                height: 100vh;
-            }
-        }
-
         @media (width <= 768px) {
             padding-bottom: 15rem;
+        }
+    }
+
+    .OS-2 img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+
+        z-index: 500;
+
+        animation: img-dissapear both;
+        animation-timeline: view();
+        animation-range: entry 60% cover 70%;
+
+        border-radius: 0 0 5rem 5rem;
+    }
+
+    @media (width <= 768px) {
+        .OS-2 img{
+            object-fit: cover;
+            height: 100vh;
         }
     }
 
@@ -184,64 +202,65 @@
 
         height: 100%;
         width: 100%;
+    }
 
-        h1{
-            font-size: 5rem;
-            font-weight: 700;
-            color: #000;
-            font-family: var(--primaryFont);
-            z-index: 1;
+    .OS-2-info h1{
+        font-size: 5rem;
+        font-weight: 700;
+        color: #000;
+        font-family: var(--primaryFont);
+        z-index: 1;
 
-            text-align: center;
+        text-align: center;
 
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 90% cover 100%;
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 90% cover 100%;
+    }
 
-            @media (width <= 768px) {
-                font-size: 5rem;
-            }
-        }
+    .OS-2-info h2{
+        font-size: 3rem;
+        font-weight: 400;
+        color: #000;
+        text-align: center;
+        font-family: var(--primaryFont);
+        z-index: 1;
 
-        h2{
-            font-size: 3rem;
-            font-weight: 400;
-            color: #000;
-            text-align: center;
-            font-family: var(--primaryFont);
-            z-index: 1;
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 90% cover 100%;
+    }
 
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 90% cover 100%;
+    .OS-2-info p{
+        font-size: 1.5rem;
+        font-weight: 100;
+        color: #000;
+        font-family: var(--secondaryFont);
+        z-index: 1;
+        max-width: 30%;
+        text-align: center;
 
-            @media (width <= 768px) {
-                font-size: 4rem;
-            }
-        }
+        animation: text-ani both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 60%;
+    }
 
-        p{
-            font-size: 1.5rem;
-            font-weight: 100;
-            color: #000;
-            font-family: var(--secondaryFont);
-            z-index: 1;
-            max-width: 30%;
-            text-align: center;
-
-            animation: text-ani both;
-            animation-timeline: view();
-            animation-range: entry 50% cover 60%;
-
-            @media (width <= 768px) {
-                max-width: 95%;
-                font-size: 2rem;
-            }
-        }
-
-        @media (width <= 768px) {
+    @media (width <= 768px) {
+        .OS-2-info{
             justify-content: end;
-            
+        }
+
+        .OS-2-info h1{
+            font-size: 5rem;
+        }
+
+        .OS-2-info h2{
+            font-size: 4rem;
+        }
+
+        .OS-2-info p{
+            max-width: 95%;
+            font-size: 2rem;
         }
     }
 

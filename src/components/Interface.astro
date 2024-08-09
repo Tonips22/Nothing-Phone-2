@@ -64,30 +64,31 @@
         justify-content: space-between;
         align-items: center;
         height: 200vh;
+        position: relative;
+    }
 
-        @media(width <= 768px){
+    @media(width <= 768px){
+        .show{
             justify-content: space-around;
             height: 150vh;
             margin-bottom: 40rem;
         }
-
-        position: relative;
     }
 
     .first-img{
         position: relative;
-        
-        @media (width <= 768px) {
-            animation: movePhone-mq linear both;
-            animation-timeline: view();
-            animation-range: entry 65% cover 70%;
-        }
 
         animation: movePhone linear both;
         animation-timeline: view();
         animation-range: entry 65% cover 70%;
+    }
 
-
+    @media(width <= 768px){
+        .first-img{
+            animation: movePhone-mq linear both;
+            animation-timeline: view();
+            animation-range: entry 65% cover 70%;
+        }
     }
 
     .info-interface{
@@ -101,25 +102,25 @@
         gap: 5rem;
 
         position: relative;
+    }
 
-        img{
-            position: relative;
-            z-index: 2;
+    .info-interface img{
+        position: relative;
+        z-index: 2;
 
-            max-height: 80vh;
+        max-height: 80vh;
 
-            view-timeline-name: --phone;
-            view-timeline-axis: block;
-            animation-timeline: --phone;
-            animation-name: info-phone;
-            animation-range: 20% 40%;
-            animation-fill-mode: both;
+        view-timeline-name: --phone;
+        view-timeline-axis: block;
+        animation-timeline: --phone;
+        animation-name: info-phone;
+        animation-range: 20% 40%;
+        animation-fill-mode: both;
+    }
 
-            @media(width <= 768px){
-                display: none;
-            }
-
-
+    @media(width <= 768px){
+        .info-interface{
+            display: none;
         }
     }
 
@@ -135,7 +136,16 @@
         font-family: var(--primaryFont);
         z-index: 1;
 
-        @media (width <= 768px) {
+        view-timeline-name: --phone;
+            view-timeline-axis: block;
+            animation-timeline: --phone;
+            animation-name: info-text;
+            animation-range: 5% 30%;
+            animation-fill-mode: both;
+    }
+
+    @media(width <= 768px){
+        .info{
             max-width: 100%;
 
             view-timeline-name: --phone;
@@ -145,28 +155,21 @@
             animation-range: 30% 50%;
             animation-fill-mode: both;
         }
+    }
 
-        h1{
-            font-size: 5rem;
-            text-align: center;
-        }
+    .info h1{
+        font-size: 5rem;
+        text-align: center;
+    }
 
-        h2{
-            font-size: 3rem;
-            text-align: center;
-        }
+    .info h2{
+        font-size: 3rem;
+        text-align: center;
+    }
 
-        p{
-            text-align: center;
-            text-wrap: pretty;
-        }
-
-        view-timeline-name: --phone;
-            view-timeline-axis: block;
-            animation-timeline: --phone;
-            animation-name: info-text;
-            animation-range: 5% 30%;
-            animation-fill-mode: both;
+    .info p{
+        text-align: center;
+        text-wrap: pretty;
     }
 
     @keyframes movePhone{
@@ -258,29 +261,30 @@
         justify-content: space-around;
 
         color: var(--white);
+    }
 
-        video{
-            width: 50%;
-            height: 100%;
-            border-radius: 0 5rem 5rem 0;
-
-            @media (width <= 768px) {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-
-                object-fit: cover;
-                border-radius: 0rem;
-
-            }
-        }
-
-
-        @media (width <= 768px) {
+    @media (width <= 768px) {
+        swiper-slide{
             position: relative;
+        }
+    }
 
+    swiper-slide video{
+        width: 50%;
+        height: 100%;
+        border-radius: 0 5rem 5rem 0;
+    }
+
+    @media (width <= 768px) {
+        swiper-slide video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            border-radius: 0rem;
         }
     }
 
@@ -296,29 +300,40 @@
         z-index: 1;
 
         animation: intro-slider ease-in-out 1s;
+    }
 
-        h1{
-            font-size: 5rem;
-            animation: intro-info both;
-            animation-timeline: view();
-            animation-range: entry 65% cover 70%;
+    .info-slider h1{
+        font-size: 5rem;
+        animation: intro-info both;
+        animation-timeline: view();
+        animation-range: entry 65% cover 70%;
 
-            text-wrap: balance;
-            text-align: center;
+        text-wrap: balance;
+        text-align: center;
+    }
+
+    .info-slider h2{
+        font-size: 3rem;
+        text-wrap: balance;
+
+        text-align: center;
+    }
+
+    .info-slider p{
+        font-family: var(--secondaryFont);
+        width: 60%;
+        text-wrap: pretty;
+        text-align: center;
+    }
+
+    @media (width <= 768px) {
+        .info-slider h2{
+            font-size: 2rem;
         }
 
-        h2{
-            font-size: 3rem;
-            text-wrap: balance;
-
-            text-align: center;
-        }
-
-        p{
-            font-family: var(--secondaryFont);
-            width: 60%;
-            text-wrap: pretty;
-            text-align: center;
+        .info-slider p{
+            width: 80%;
+            font-size: 1.2rem;
         }
     }
     
