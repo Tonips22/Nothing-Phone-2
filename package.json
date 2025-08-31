@@ -9,6 +9,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "dependencies": {
     "@fontsource-variable/onest": "^5.0.2",
     "@fontsource/poppins": "^5.0.8",
